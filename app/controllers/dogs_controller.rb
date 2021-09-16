@@ -6,7 +6,7 @@ class DogsController < ApplicationController
   def show
     @dog = Dog.find(params[:id])
     @badgeURL = "#{request.base_url}/dogs/#{@dog.id}/badge.svg"
-
+    @badgeURLGoodmeal = "https://oliviersandbox2.herokuapp.com/dogs/9/badge.svg"
   end
 
   def new
