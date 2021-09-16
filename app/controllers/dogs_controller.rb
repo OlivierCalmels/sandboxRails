@@ -5,6 +5,8 @@ class DogsController < ApplicationController
 
   def show
     @dog = Dog.find(params[:id])
+    @badgeURL = "#{request.base_url}/dogs/#{@dog.id}/badge.svg"
+
   end
 
   def new
@@ -44,6 +46,8 @@ class DogsController < ApplicationController
     
     <text font-family="Lato, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#ECB613" x="32" y="18.77" text-anchor="middle" transform="translate(7 6)">5 kyu</text>
     </svg>'
+
+    #{request.base_url}
 
     respond_to do |format|
       format.svg { render inline: svg}

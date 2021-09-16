@@ -6,8 +6,8 @@
   <li><%= @dog.name %></li>
   <li><%= link_to 'Remove', @dog, method: :delete, data: { confirm: 'Are you sure?' } %></li>
   <li><%= link_to 'Badge', badge_dog_path(@dog) %></li>
-  <li> http://localhost:3000/dogs/<%=@dog.id%>/badge.svg</li>
-  <a href="http://localhost:3000/dogs/<%=@dog.id%>/badge.svg"> <img src="http://localhost:3000/dogs/<%=@dog.id%>/badge.svg" alt="Test de badge"></a>
+  <li><%=@badgeURL%></li>
+  <a href="<%=@badgeURL%>"> <img src="<%=@badgeURL%>" alt="Test de badge"></a>
 </ul>
 
 <% 
