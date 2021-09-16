@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   get "icons/generate" => "icons#generate", format: :svg
 
-  get "iconTest" => "icons#test"
-  
+  get "icontest" => "icons#test"
+
   resources :dogs do
     member do
       get 'badge' => 'dogs#badge', format: :svg
